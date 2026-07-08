@@ -1,4 +1,4 @@
--- [[ ★PPINGYYY HUB - SMOOTH ANIMATION EDITION + SETTINGS ★ ]] --
+-- [[ ★egg man HUB - SMOOTH ANIMATION EDITION + SETTINGS ★ ]] --
 local lp = game:GetService("Players").LocalPlayer
 local RS = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
