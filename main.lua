@@ -384,16 +384,16 @@ NpcBtnMaoshan.Font = Enum.Font.GothamBold
 NpcBtnMaoshan.TextSize = 10
 Instance.new("UICorner", NpcBtnMaoshan).CornerRadius = UDim.new(0, 5)
 
--- Tagist 按钮 (右)
-local NpcBtnTagist = Instance.new("TextButton", Page3)
-NpcBtnTagist.Size = UDim2.new(0.43, 0, 0, 28)
-NpcBtnTagist.Position = UDim2.new(0.52, 0, 0, 215)
-NpcBtnTagist.Text = "🚀 Tagist"
-NpcBtnTagist.BackgroundColor3 = Color3.fromRGB(40, 40, 50)
-NpcBtnTagist.TextColor3 = Color3.new(1, 1, 1)
-NpcBtnTagist.Font = Enum.Font.GothamBold
-NpcBtnTagist.TextSize = 10
-Instance.new("UICorner", NpcBtnTagist).CornerRadius = UDim.new(0, 5)
+-- Taoist 按钮 (右)  ← 已修正
+local NpcBtnTaoist = Instance.new("TextButton", Page3)
+NpcBtnTaoist.Size = UDim2.new(0.43, 0, 0, 28)
+NpcBtnTaoist.Position = UDim2.new(0.52, 0, 0, 215)
+NpcBtnTaoist.Text = "🚀 Taoist"
+NpcBtnTaoist.BackgroundColor3 = Color3.fromRGB(40, 40, 50)
+NpcBtnTaoist.TextColor3 = Color3.new(1, 1, 1)
+NpcBtnTaoist.Font = Enum.Font.GothamBold
+NpcBtnTaoist.TextSize = 10
+Instance.new("UICorner", NpcBtnTaoist).CornerRadius = UDim.new(0, 5)
 
 -- 自动追踪开关
 local NpcAutoBtn = Instance.new("TextButton", Page3)
@@ -525,7 +525,7 @@ end)
 
 -- ================== NPC 追踪事件 ==================
 local npcAutoTrack = false
-local NPC_LIST = {"Maoshan", "Tagist"}
+local NPC_LIST = {"Maoshan", "Taoist"}   -- 已修正
 
 local function findAnyNpc()
     for _, name in ipairs(NPC_LIST) do
@@ -578,9 +578,9 @@ NpcBtnMaoshan.MouseButton1Click:Connect(function()
     if not npcAutoTrack then NpcStatus.Text = "就绪" end
 end)
 
--- Tagist 按钮
-NpcBtnTagist.MouseButton1Click:Connect(function()
-    local success, msg = teleportToNpc("Tagist")
+-- Taoist 按钮 (已修正)
+NpcBtnTaoist.MouseButton1Click:Connect(function()
+    local success, msg = teleportToNpc("Taoist")
     NpcStatus.Text = msg
     task.wait(1.5)
     if not npcAutoTrack then NpcStatus.Text = "就绪" end
